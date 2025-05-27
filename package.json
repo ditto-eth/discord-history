@@ -1,0 +1,16 @@
+{
+  "name": "discord-history-bot",
+  "private": true,
+  "version": "0.0.1",
+  "main": "cli.ts",
+  "scripts": {
+    "start": "bun cli.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.9.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "type": "module"
+}

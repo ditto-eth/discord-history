@@ -18,11 +18,8 @@ To run the bot, you need to create a Discord application and add a bot account:
 
 ## Install
 
-> use bun/node
-
-`npm install`
-`npm start`
-`npm start --guild=GUILD --channel=CHANNEL`
+- download `https://bun.sh`
+- `bun install`
 
 **Usage:**
 1. Set the BOT_TOKEN environment variable.
@@ -31,8 +28,7 @@ To run the bot, you need to create a Discord application and add a bot account:
 4. The bot will fetch and save messages to `history_*.txt`.
 
 ## Usage Tips
-After the bot finishes fetching messages, you can quickly copy the conversation history to your clipboard for use with an LLM. For example, on macOS run:
-```
-pbcopy < history_*.txt
-```
-You can then paste the content wherever needed.
+
+- `bun start`
+- `bun start --guild=GUILD_ID --channel=CHANNEL_ID`
+- `bun start --guild=GUILD_ID --channel=CHANNEL_ID | pbcopy`

@@ -91,11 +91,12 @@ client.once('ready', async () => {
         client.destroy();
         return;
     }
-    const messages = sorted.map(m => `${m.createdAt.toISOString()} - ${m.author.username}: ${m.content}`).join('\n');
+    // const messages = sorted.map(m => `${m.createdAt.toISOString()} - ${m.author.username}: ${m.content}`).join('\n');
+    const messages = sorted.map(m => `${m.author.username}: ${m.content}`).join('\n');
     const timeStamp = new Date().toISOString().replace(/[:.]/g, '-');
     const fileName = `history_${timeStamp}.txt`;
     const filePath = path.resolve(__dirname, '..', fileName);
-    const header = `Last Checked: ${new Date().toISOString()}\n`;
+    const header = `${new Date().toISOString()}\n`;
     await writeFile(filePath, header + '\n' + messages);
     // Print the content so it can be piped to pbcopy
     console.log(header + '\n' + messages);
